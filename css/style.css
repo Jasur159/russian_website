@@ -457,6 +457,7 @@ nav {
 }
 
 /* --------------------------------------- */
+
 #Faqs {
   padding: 56px 0;
 }
@@ -471,7 +472,7 @@ nav {
   width: 476px;
   font-size: 20px;
   font-weight: 700;
-  line-height: 150%; /* 30px */
+  line-height: 150%;
 }
 .faqs_card li {
   padding: 24px;
@@ -499,12 +500,16 @@ nav {
   opacity: 1;
   max-height: 96px;
   margin-top: 24px;
+  transition-delay: 1s;
+  transition: 1s;
 }
 .accordion:checked + .accordion_label + i {
   transform: rotate(-90deg);
+  transition: 1s;
 }
 
 /* --------------------------     */
+
 #Contact {
   padding: 56px 0 124px;
   max-width: 1250px;
@@ -552,6 +557,8 @@ footer {
 .footer_links a {
   color: var(--color-white);
   font-weight: 700;
+  border-bottom: 1px solid transparent;
+  transition: 0.4s;
 }
 .footer_links .logo {
   color: var(--color-white);
@@ -561,6 +568,13 @@ footer {
   font-weight: 700;
   line-height: normal;
   margin-right: 13px;
+  border: none;
+}
+.footer_links .logo:hover {
+  border: none;
+}
+.footer_links a:hover {
+  border-bottom: 1px solid var(--background-color);
 }
 .social_links {
   display: flex;
@@ -575,9 +589,17 @@ footer {
   justify-content: center;
   background-color: #f3f6ff;
   border-radius: 50%;
+  transition: 0.7s;
 }
-.social_links a i {
-  font-size: 20px;
+.social_links a:hover {
+  transform: scale(1.1);
+  background-color: transparent;
+}
+.social_links a svg {
+  transition: transform 0.7s;
+}
+.social_links a:hover svg {
+  transform: scale(1.2);
 }
 .footer_info {
   display: flex;
